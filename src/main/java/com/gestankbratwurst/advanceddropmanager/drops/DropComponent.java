@@ -1,6 +1,7 @@
 package com.gestankbratwurst.advanceddropmanager.drops;
 
 import com.gestankbratwurst.advanceddropmanager.conditions.DropCondition;
+import com.gestankbratwurst.advanceddropmanager.ui.UIRepresentable;
 import java.util.Optional;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -15,7 +16,7 @@ import org.bukkit.inventory.Inventory;
  * permission of the owner.
  *
  */
-public interface DropComponent extends DropCondition {
+public interface DropComponent extends DropCondition, UIRepresentable {
 
   void giveTo(Player player);
 

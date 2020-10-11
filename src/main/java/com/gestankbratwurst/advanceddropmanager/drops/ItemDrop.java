@@ -1,5 +1,6 @@
 package com.gestankbratwurst.advanceddropmanager.drops;
 
+import java.util.Optional;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -16,24 +17,40 @@ import org.bukkit.inventory.ItemStack;
  */
 public class ItemDrop implements DropComponent {
 
-  public ItemDrop(DropSupplier<ItemStack> dropSupplier) {
+  public ItemDrop(final DropSupplier<ItemStack> dropSupplier) {
     this.dropSupplier = dropSupplier;
   }
 
   private final DropSupplier<ItemStack> dropSupplier;
 
   @Override
-  public void giveTo(Player player) {
+  public void giveTo(final Player player) {
 
   }
 
   @Override
-  public void addTo(Inventory inventory) {
+  public void addTo(final Inventory inventory) {
 
   }
 
   @Override
-  public void dropAt(Location location) {
+  public void dropAt(final Location location) {
 
   }
+
+  @Override
+  public Optional<DropComponent> getParent() {
+    return Optional.empty();
+  }
+
+  @Override
+  public ItemStack getIcon(final Player viewer) {
+    return this.dropSupplier.getIcon(viewer);
+  }
+
+  @Override
+  public boolean test(final Player player) {
+    return true;
+  }
+
 }

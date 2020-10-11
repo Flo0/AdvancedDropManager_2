@@ -1,5 +1,6 @@
 package com.gestankbratwurst.advanceddropmanager.drops;
 
+import com.gestankbratwurst.advanceddropmanager.ui.UIRepresentable;
 import org.bukkit.entity.Player;
 
 /*******************************************************
@@ -11,7 +12,7 @@ import org.bukkit.entity.Player;
  * permission of the owner.
  *
  */
-public interface DropSupplier<T> {
+public interface DropSupplier<T> extends UIRepresentable {
 
   T generate(Player player);
 
