@@ -1,5 +1,6 @@
 package com.gestankbratwurst.advanceddropmanager.conditions;
 
+import com.gestankbratwurst.advanceddropmanager.ui.UIRepresentable;
 import java.util.function.Predicate;
 import org.bukkit.entity.Player;
 
@@ -12,6 +13,6 @@ import org.bukkit.entity.Player;
  * permission of the owner.
  *
  */
-public interface DropCondition extends Predicate<Player> {
+public interface DropCondition extends Predicate<Player>, UIRepresentable {
 
 }
